@@ -38,6 +38,7 @@ public class PlayerService {
             return point;
         } else {
             IO.out("Você perdeu! Lamento.");
+            return point;
         }
     }
 
