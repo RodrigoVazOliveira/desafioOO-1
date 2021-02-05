@@ -22,12 +22,15 @@ public class GameService {
     public void startGaming(Player player, PlayerService playerService, DefaultGame defaultGame) {
 
         IO.out("Bem vindo ao jogo do adivinha!");
+        IO.out("escolha o nível? ( 1 - 2 - 3)");
+        int nivel = Integer.parseInt(IO.input().nextLine());
+        defaultGame.updateNumberRandomNivel(nivel * 10);
         while (playing) {
             IO.out("digite um número a ser adivinhado: ");
             player.setNumber(Integer.parseInt(IO.input().nextLine()));
             playerService.startGaming();
             IO.out("Deseja tentar novamente? (s/n)");
-            exitGaming(IO.input().nextLine(), defaultGame);
+            exitGaming(IO.input().nextLine(), defaultGame, nivel * 10);
         }
         playerService.pointFinalGame();
 
@@ -39,12 +42,12 @@ public class GameService {
      * @param  String - resposta do jogador
      * @param defaultGame - para atualizar o número aleatório
      * */
-    private void exitGaming(String response, DefaultGame defaultGame) {
+    private void exitGaming(String response, DefaultGame defaultGame, int nivel) {
 
         if (response.equalsIgnoreCase("n")) {
             playing = false;
         } else {
-            defaultGame.updateNumberRandon();
+            defaultGame.updateNumberRandomNivel(nivel);
         }
     }
 

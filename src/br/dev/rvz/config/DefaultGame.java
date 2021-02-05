@@ -15,4 +15,8 @@ public class DefaultGame {
     public void updateNumberRandon() {
         game.setNumberRandom(GenerateNumber.next(5));
     }
+
+    public void updateNumberRandomNivel(int level) {
+        game.setMaxNumberRandom(GenerateNumber.next(level));
+    }
 }
