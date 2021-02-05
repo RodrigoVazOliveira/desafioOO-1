@@ -1,12 +1,16 @@
 package br.dev.rvz.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Player implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private Integer number;
     private Integer points;
+    private List<Integer> asset = new ArrayList<>();
+    private List<Integer> errors = new ArrayList<>();
 
 
     public Player() {
@@ -35,5 +39,13 @@ public class Player implements Serializable {
 
     public void setPoints(Integer points) {
         this.points = points;
+    }
+
+    public List<Integer> getAsset() {
+        return asset;
+    }
+
+    public List<Integer> getErrors() {
+        return errors;
     }
 }
