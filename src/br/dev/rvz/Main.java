@@ -15,9 +15,7 @@ public class Main {
         player.setPoints(0);
 
         GameService gameService = new GameService();
-        gameService.welcome();
-        player.setNumber(Integer.parseInt(IO.input().nextLine()));
         PlayerService playerService = new PlayerService(player, game);
-        playerService.startGaming();
+        gameService.startGaming(player, playerService);
     }
 }
