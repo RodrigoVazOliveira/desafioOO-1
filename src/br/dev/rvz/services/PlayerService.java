@@ -31,6 +31,11 @@ public class PlayerService {
         }
     }
 
+    /**
+     * valida a o jogo e imprimi se o jogador acertou ou errou
+     * @param Integer - número que foi escolhido pelo jogador
+     * @return Integer - número de pontos ganhos
+     * */
     private Integer printResult(Integer number) {
         int point = validationAsset(number);
         if (point > 0) {
@@ -42,6 +47,10 @@ public class PlayerService {
         }
     }
 
+    /**
+     * exibir o pontuação final do jogador
+     * @return void
+     * */
     public void pointFinalGame() {
         IO.out("Sua pontuação final é: " + player.getPoints());
     }

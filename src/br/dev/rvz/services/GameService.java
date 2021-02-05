@@ -12,6 +12,13 @@ public class GameService {
         playing = true;
     }
 
+
+    /**
+     * metodo responsáviel por repetir a solciitaçaõ de números ao jogador
+     * @param player - um player para jogar e colcoar os dados, número de adivinha
+     * @param playerService - serviço de player para fazer as regras e verficações
+     * @param defaultGame - mudar configurações do jogo
+     * */
     public void startGaming(Player player, PlayerService playerService, DefaultGame defaultGame) {
 
         IO.out("Bem vindo ao jogo do adivinha!");
@@ -26,6 +33,12 @@ public class GameService {
 
     }
 
+    /**
+     * verificar se o jogador vai sair do jogo
+     * caso ele queira sair, será exibido a pontuação final
+     * @param  String - resposta do jogador
+     * @param defaultGame - para atualizar o número aleatório
+     * */
     private void exitGaming(String response, DefaultGame defaultGame) {
 
         if (response.equalsIgnoreCase("n")) {
