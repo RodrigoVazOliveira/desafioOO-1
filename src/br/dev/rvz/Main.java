@@ -10,12 +10,13 @@ import br.dev.rvz.services.PlayerService;
 public class Main {
 
     public static void main(String[] args) {
-        Game game = new DefaultGame().start();
+        DefaultGame defaultGame = new DefaultGame();
+        Game game = defaultGame.start();
         Player player = new Player();
         player.setPoints(0);
 
         GameService gameService = new GameService();
         PlayerService playerService = new PlayerService(player, game);
-        gameService.startGaming(player, playerService);
+        gameService.startGaming(player, playerService, defaultGame);
     }
 }

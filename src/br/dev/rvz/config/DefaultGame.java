@@ -4,8 +4,15 @@ import br.dev.rvz.domain.Game;
 import br.dev.rvz.services.GenerateNumber;
 
 public class DefaultGame {
+
+    private Game game;
+
     public Game start() {
-        Game game = new Game(10, 5, GenerateNumber.next(5));
+        game = new Game(10, 5, GenerateNumber.next(5));
         return game;
+    }
+
+    public void updateNumberRandon() {
+        game.setNumberRandom(GenerateNumber.next(5));
     }
 }
