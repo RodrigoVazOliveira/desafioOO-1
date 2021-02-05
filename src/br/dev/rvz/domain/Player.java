@@ -1,4 +1,4 @@
-package br.dev.rvz;
+package br.dev.rvz.domain;
 
 import java.io.Serializable;
 
