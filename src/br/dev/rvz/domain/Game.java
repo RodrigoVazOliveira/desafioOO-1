@@ -7,15 +7,17 @@ public class Game implements Serializable {
 
     private Integer point;
     private Integer minPoint;
-    private Integer maxPoint;
+    private Integer minNumberRandom;
+    private Integer maxNumberRandom;
+    private Integer numberRandom;
 
-    public Game() {
-    }
-
-    public Game(Integer point, Integer minPoint, Integer maxPoint) {
+    public Game(Integer point, Integer minPoint, Integer numberRandom) {
         this.point = point;
         this.minPoint = minPoint;
-        this.maxPoint = maxPoint;
+        this.numberRandom = numberRandom;
+        this.minNumberRandom = numberRandom - 1;
+        this.maxNumberRandom = numberRandom + 1;
+
     }
 
     public Integer getPoint() {
@@ -34,11 +36,27 @@ public class Game implements Serializable {
         this.minPoint = minPoint;
     }
 
-    public Integer getMaxPoint() {
-        return maxPoint;
+    public Integer getMinNumberRandom() {
+        return minNumberRandom;
     }
 
-    public void setMaxPoint(Integer maxPoint) {
-        this.maxPoint = maxPoint;
+    public void setMinNumberRandom(Integer minNumberRandom) {
+        this.minNumberRandom = minNumberRandom;
+    }
+
+    public Integer getMaxNumberRandom() {
+        return maxNumberRandom;
+    }
+
+    public void setMaxNumberRandom(Integer maxNumberRandom) {
+        this.maxNumberRandom = maxNumberRandom;
+    }
+
+    public Integer getNumberRandom() {
+        return numberRandom;
+    }
+
+    public void setNumberRandom(Integer numberRandom) {
+        this.numberRandom = numberRandom;
     }
 }
