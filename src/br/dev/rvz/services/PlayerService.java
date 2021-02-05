@@ -42,4 +42,8 @@ public class PlayerService {
         }
     }
 
+    public void pointFinalGame() {
+        IO.out("Sua pontuação final é: " + player.getPoints());
+    }
+
 }
